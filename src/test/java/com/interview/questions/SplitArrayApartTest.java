@@ -7,16 +7,18 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class SplitArrayApartTest {
+    // Split original array into thirds
+    int splitInto = 3;
+
     @Test
     public void splitIntegerArray_Valid() {
-        List<int[]> list = SplitArrayApart.splitIntegerArray(new int[]{1, 2, 3, 4, 5, 6});
+        List<int[]> list = SplitArrayApart.splitIntegerArray(new int[]{1, 2, 3, 4, 5, 6}, splitInto);
         assertThat(list).containsExactly(new int[] {1,2}, new int[] {3,4}, new int[] {5,6});
     }
 
     @Test
     public void splitStringArray_Valid() {
-        List<String[]> list = SplitArrayApart.splitStringArray(new String[]{"a", "b", "c", "d", "e", "f"});
+        List<String[]> list = SplitArrayApart.splitStringArray(new String[]{"a", "b", "c", "d", "e", "f"}, splitInto);
         assertThat(list).containsExactly(new String[] {"a","b"}, new String[] {"c","d"}, new String[] {"e","f"});
     }
-
 }
