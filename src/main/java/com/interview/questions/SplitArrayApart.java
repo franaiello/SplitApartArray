@@ -13,8 +13,10 @@ public class SplitArrayApart {
      * to split up the array into separate individual arrays
      *
      * @param array
-     * @param splitInto Example: array [1,2,3,4,5,6]
-     *                  returns [1,2] [3,4] [5,6]
+     * @param splitInto
+     *
+     * Example: array [1,2,3,4,5,6]
+     *          returns [1,2] [3,4] [5,6]
      */
     public static List<int[]> splitIntegerArray(int[] array, int splitInto) {
         int arrayLength = array.length;
